@@ -29,13 +29,56 @@ URL = {"a": "http://127.0.0.1:8001", "b": "http://127.0.0.1:8002"}
 
 
 def probe(region: str, timeout: float) -> tuple[bool, str]:
-    """TODO: trả về (ready, reason). Timeout PHẢI có — netblock làm request treo mãi."""
-    raise NotImplementedError
+    """Trả về (ready, reason). Timeout PHẢI có — netblock làm request treo mãi."""
+    try:
+        r = httpx.get(f"{URL[region]}/readyz", timeout=timeout)
+    except Exception as e:  # ConnectError (stop) / ReadTimeout (netblock)
+        return False, type(e).__name__
+    if r.status_code == 200:
+        return True, "ready"
+    try:
+        reasons = r.json().get("reasons") or []
+    except ValueError:
+        reasons = []
+    return False, ",".join(reasons) or f"http_{r.status_code}"
+
+
+def _write(f, rec: dict):
+    rec = {"ts": time.time(), "iso": time.strftime("%Y-%m-%dT%H:%M:%S", time.gmtime()), **rec}
+    f.write(json.dumps(rec) + "\n")
+    f.flush()
+    print("HEALTH", json.dumps(rec))
 
 
 def run(interval: float, timeout: float, threshold: int, duration: float, out: pathlib.Path):
-    """TODO: vòng lặp poll + phát hiện transition + ghi JSONL."""
-    raise NotImplementedError
+    """Vòng lặp poll + phát hiện transition + ghi JSONL (chỉ ghi khi ĐỔI trạng thái)."""
+    out.parent.mkdir(parents=True, exist_ok=True)
+    cfg = {"interval_s": interval, "threshold": threshold, "timeout_s": timeout}
+    # Giả định ban đầu HEALTHY (không log): chỉ có threshold lần liên tiếp mới đổi được nó.
+    st = {r: {"state": "HEALTHY", "fails": 0, "oks": 0} for r in URL}
+    end = time.time() + duration
+    with out.open("a") as f:
+        _write(f, {"event": "start", "regions": list(URL), "duration_s": duration, **cfg})
+        while time.time() < end:
+            tick = time.time()
+            for region, s in st.items():
+                ok, reason = probe(region, timeout)
+                if ok:
+                    s["oks"], s["fails"] = s["oks"] + 1, 0
+                else:
+                    s["fails"], s["oks"] = s["fails"] + 1, 0
+                if s["state"] == "HEALTHY" and s["fails"] >= threshold:
+                    new = "UNHEALTHY"
+                elif s["state"] == "UNHEALTHY" and s["oks"] >= threshold:
+                    new = "HEALTHY"
+                else:
+                    continue
+                _write(f, {"event": "state_change", "region": region, "from": s["state"],
+                           "to": new, "reason": reason, "consecutive_fails": s["fails"],
+                           "consecutive_ok": s["oks"], **cfg})
+                s["state"] = new
+            time.sleep(max(0.0, interval - (time.time() - tick)))
+        _write(f, {"event": "stop", "final": {r: s["state"] for r, s in st.items()}, **cfg})
 
 
 if __name__ == "__main__":
