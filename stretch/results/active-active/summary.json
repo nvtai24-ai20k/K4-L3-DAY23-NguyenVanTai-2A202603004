@@ -1,0 +1,49 @@
+{
+  "t_kill": 1791515150.225139,
+  "before_kill": {
+    "requests": 31,
+    "failed": 0,
+    "served_by": {
+      "a": 15,
+      "b": 16
+    },
+    "p50_ms": 18.9,
+    "p95_ms": 30.4,
+    "max_ms": 1041.6,
+    "longest_failure_streak_s": 0.0
+  },
+  "after_kill": {
+    "requests": 58,
+    "failed": 0,
+    "served_by": {
+      "b": 58
+    },
+    "p50_ms": 18.3,
+    "p95_ms": 1033.0,
+    "max_ms": 1033.9,
+    "longest_failure_streak_s": 0.0
+  },
+  "slow_requests_after_kill": [
+    {
+      "line": 33,
+      "t_from_kill_s": 1.5,
+      "latency_ms": 1033.0,
+      "ok": true,
+      "served_by": "b"
+    },
+    {
+      "line": 55,
+      "t_from_kill_s": 16.4,
+      "latency_ms": 1033.9,
+      "ok": true,
+      "served_by": "b"
+    },
+    {
+      "line": 77,
+      "t_from_kill_s": 27.9,
+      "latency_ms": 1033.0,
+      "ok": true,
+      "served_by": "b"
+    }
+  ]
+}

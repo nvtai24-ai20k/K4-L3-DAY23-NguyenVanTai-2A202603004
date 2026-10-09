@@ -1,0 +1,5 @@
+{"ts": 1791516066.557875, "iso": "2026-10-09T03:21:06", "event": "start", "regions": ["a", "b"], "duration_s": 100.0, "interval_s": 5.0, "threshold": 3, "timeout_s": 2.0}
+{"ts": 1791516076.5892012, "iso": "2026-10-09T03:21:16", "event": "state_change", "region": "b", "from": "HEALTHY", "to": "UNHEALTHY", "reason": "pool_state=warm,model_weights_missing,vector_db_empty(count=0)", "consecutive_fails": 3, "consecutive_ok": 0, "interval_s": 5.0, "threshold": 3, "timeout_s": 2.0}
+{"ts": 1791516093.5735917, "iso": "2026-10-09T03:21:33", "event": "state_change", "region": "a", "from": "HEALTHY", "to": "UNHEALTHY", "reason": "ReadTimeout", "consecutive_fails": 3, "consecutive_ok": 0, "interval_s": 5.0, "threshold": 3, "timeout_s": 2.0}
+{"ts": 1791516116.9229846, "iso": "2026-10-09T03:21:56", "event": "state_change", "region": "b", "from": "UNHEALTHY", "to": "HEALTHY", "reason": "ready", "consecutive_fails": 0, "consecutive_ok": 3, "interval_s": 5.0, "threshold": 3, "timeout_s": 2.0}
+{"ts": 1791516166.5650632, "iso": "2026-10-09T03:22:46", "event": "stop", "final": {"a": "UNHEALTHY", "b": "HEALTHY"}, "interval_s": 5.0, "threshold": 3, "timeout_s": 2.0}

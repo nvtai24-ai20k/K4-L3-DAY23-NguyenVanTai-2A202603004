@@ -1,0 +1,30 @@
+{
+  "ingest_docs_per_s": 50.0,
+  "db_mb": 0.26,
+  "snapshot.put (goc) / fs": {
+    "n": 30,
+    "put_errors": 0,
+    "error_types": {},
+    "torn_copies": 0
+  },
+  "snapshot.put (goc) / minio": {
+    "n": 30,
+    "put_errors": 12,
+    "error_types": {
+      "S3UploadFailedError:BadDigest": 12
+    },
+    "torn_copies": 0
+  },
+  "consistent_snapshot.put / fs": {
+    "n": 30,
+    "put_errors": 0,
+    "error_types": {},
+    "torn_copies": 0
+  },
+  "consistent_snapshot.put / minio": {
+    "n": 30,
+    "put_errors": 0,
+    "error_types": {},
+    "torn_copies": 0
+  }
+}

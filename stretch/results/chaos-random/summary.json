@@ -1,0 +1,121 @@
+{
+  "all": {
+    "n": 5,
+    "mean_s": 25.12,
+    "stdev_s": 2.89,
+    "min_s": 21.8,
+    "max_s": 28.6
+  },
+  "by_mode": {
+    "stop": {
+      "n": 2,
+      "mean_s": 22.25,
+      "stdev_s": 0.64,
+      "min_s": 21.8,
+      "max_s": 22.7
+    },
+    "netblock": {
+      "n": 3,
+      "mean_s": 27.03,
+      "stdev_s": 1.66,
+      "min_s": 25.3,
+      "max_s": 28.6
+    }
+  },
+  "detect": {
+    "n": 5,
+    "mean_s": 14.64,
+    "stdev_s": 2.73,
+    "min_s": 11.7,
+    "max_s": 18.3
+  },
+  "rpo": {
+    "n": 5,
+    "mean_s": 9.6,
+    "stdev_s": 9.32,
+    "min_s": 2.0,
+    "max_s": 24.0
+  },
+  "runs": [
+    {
+      "run": 1,
+      "mode": "stop",
+      "kill_after_s": 8.3,
+      "seed": 2310,
+      "valid": true,
+      "warnings": 0,
+      "first_fail_s": 0.3,
+      "detect_s": 11.7,
+      "cutover_s": 18.5,
+      "rto_s": 21.8,
+      "verdict": "PASS",
+      "rpo_s": 24.0,
+      "docs_lost": 12,
+      "requests_failed": 43
+    },
+    {
+      "run": 2,
+      "mode": "stop",
+      "kill_after_s": 17.8,
+      "seed": 2310,
+      "valid": true,
+      "warnings": 0,
+      "first_fail_s": 0.2,
+      "detect_s": 12.2,
+      "cutover_s": 18.5,
+      "rto_s": 22.7,
+      "verdict": "PASS",
+      "rpo_s": 4.0,
+      "docs_lost": 2,
+      "requests_failed": 45
+    },
+    {
+      "run": 3,
+      "mode": "netblock",
+      "kill_after_s": 20.7,
+      "seed": 2310,
+      "valid": true,
+      "warnings": 0,
+      "first_fail_s": 0.3,
+      "detect_s": 18.3,
+      "cutover_s": 26.5,
+      "rto_s": 28.6,
+      "verdict": "PASS",
+      "rpo_s": 14.0,
+      "docs_lost": 7,
+      "requests_failed": 13
+    },
+    {
+      "run": 4,
+      "mode": "netblock",
+      "kill_after_s": 13.8,
+      "seed": 2310,
+      "valid": true,
+      "warnings": 0,
+      "first_fail_s": 0.2,
+      "detect_s": 15.9,
+      "cutover_s": 23.2,
+      "rto_s": 27.2,
+      "verdict": "PASS",
+      "rpo_s": 2.0,
+      "docs_lost": 1,
+      "requests_failed": 12
+    },
+    {
+      "run": 5,
+      "mode": "netblock",
+      "kill_after_s": 14.7,
+      "seed": 2310,
+      "valid": true,
+      "warnings": 0,
+      "first_fail_s": 0.3,
+      "detect_s": 15.1,
+      "cutover_s": 23.3,
+      "rto_s": 25.3,
+      "verdict": "PASS",
+      "rpo_s": 4.0,
+      "docs_lost": 2,
+      "requests_failed": 11
+    }
+  ]
+}

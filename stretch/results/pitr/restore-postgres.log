@@ -1,0 +1,9 @@
+2026-10-09 02:52:11.991 UTC [35] LOG:  starting point-in-time recovery to 2026-10-09 02:52:07.24409+00
+2026-10-09 02:52:12.016 UTC [35] LOG:  restored log file "000000010000000000000003" from archive
+2026-10-09 02:52:12.074 UTC [35] LOG:  restored log file "000000010000000000000004" from archive
+2026-10-09 02:52:12.115 UTC [35] LOG:  restored log file "000000010000000000000005" from archive
+2026-10-09 02:52:12.142 UTC [1] LOG:  database system is ready to accept read-only connections
+2026-10-09 02:52:12.146 UTC [35] LOG:  recovery stopping before commit of transaction 749, time 2026-10-09 02:52:08.586169+00
+2026-10-09 02:52:12.173 UTC [35] LOG:  restored log file "000000010000000000000005" from archive
+2026-10-09 02:52:12.208 UTC [35] LOG:  selected new timeline ID: 2
+2026-10-09 02:52:12.369 UTC [1] LOG:  database system is ready to accept connections

@@ -1,0 +1,1 @@
+{"mode":"active-active","timeout_s":1.0,"trip_after":2,"cooldown_s":10.0,"circuit":{"a":{"fails":4,"open":true},"b":{"fails":0,"open":false}}}

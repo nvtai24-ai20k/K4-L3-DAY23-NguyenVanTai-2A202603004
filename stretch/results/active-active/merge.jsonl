@@ -1,0 +1,16 @@
+{"ts": 1791515135.0974393, "iso": "2026-10-09T03:05:35", "alive": {"a": true, "b": true}, "event": "merge", "copied_to_a": 2, "copied_to_b": 1, "conflicts": [{"doc_id": "ticket-42", "winner": "b", "a_ts": 1791515135.0344372, "b_ts": 1791515136.0344372, "a_body": "ticket-42: khach doi dia chi (sua o regi", "b_body": "ticket-42: khach doi dia chi + SDT (sua "}], "count_a": 204, "count_b": 203}
+{"ts": 1791515140.097512, "iso": "2026-10-09T03:05:40", "alive": {"a": true, "b": true}, "event": "merge", "copied_to_a": 2, "copied_to_b": 2, "conflicts": [], "count_a": 207, "count_b": 207}
+{"ts": 1791515145.097619, "iso": "2026-10-09T03:05:45", "alive": {"a": true, "b": true}, "event": "merge", "copied_to_a": 3, "copied_to_b": 3, "conflicts": [], "count_a": 213, "count_b": 213}
+{"ts": 1791515150.0977492, "iso": "2026-10-09T03:05:50", "alive": {"a": true, "b": true}, "event": "merge", "copied_to_a": 2, "copied_to_b": 2, "conflicts": [], "count_a": 217, "count_b": 217}
+{"ts": 1791515155.097831, "iso": "2026-10-09T03:05:55", "alive": {"a": false, "b": true}, "event": "skip_partition", "reason": "region ['a'] khong tra loi"}
+{"ts": 1791515160.0978963, "iso": "2026-10-09T03:06:00", "alive": {"a": false, "b": true}, "event": "skip_partition", "reason": "region ['a'] khong tra loi"}
+{"ts": 1791515168.4210615, "iso": "2026-10-09T03:06:08", "alive": {"a": false, "b": true}, "event": "skip_partition", "reason": "region ['a'] khong tra loi"}
+{"ts": 1791515173.4210968, "iso": "2026-10-09T03:06:13", "alive": {"a": false, "b": true}, "event": "skip_partition", "reason": "region ['a'] khong tra loi"}
+{"ts": 1791515178.4212246, "iso": "2026-10-09T03:06:18", "alive": {"a": false, "b": true}, "event": "skip_partition", "reason": "region ['a'] khong tra loi"}
+{"ts": 1791515183.4213145, "iso": "2026-10-09T03:06:23", "alive": {"a": false, "b": true}, "event": "skip_partition", "reason": "region ['a'] khong tra loi"}
+{"ts": 1791515188.421394, "iso": "2026-10-09T03:06:28", "alive": {"a": true, "b": true}, "event": "merge", "copied_to_a": 18, "copied_to_b": 18, "conflicts": [], "count_a": 253, "count_b": 253}
+{"ts": 1791515193.421486, "iso": "2026-10-09T03:06:33", "alive": {"a": true, "b": true}, "event": "merge", "copied_to_a": 2, "copied_to_b": 2, "conflicts": [], "count_a": 257, "count_b": 257}
+{"ts": 1791515201.7641604, "iso": "2026-10-09T03:06:41", "alive": {"a": true, "b": true}, "event": "merge", "copied_to_a": 3, "copied_to_b": 3, "conflicts": [], "count_a": 263, "count_b": 263}
+{"ts": 1791515206.7642388, "iso": "2026-10-09T03:06:46", "alive": {"a": true, "b": true}, "event": "merge", "copied_to_a": 1, "copied_to_b": 1, "conflicts": [], "count_a": 265, "count_b": 265}
+{"ts": 1791515211.7642782, "iso": "2026-10-09T03:06:51", "alive": {"a": true, "b": true}, "event": "merge", "copied_to_a": 0, "copied_to_b": 0, "conflicts": [], "count_a": 265, "count_b": 265}
+{"ts": 1791515216.7643633, "iso": "2026-10-09T03:06:56", "alive": {"a": true, "b": true}, "event": "merge", "copied_to_a": 0, "copied_to_b": 0, "conflicts": [], "count_a": 265, "count_b": 265}

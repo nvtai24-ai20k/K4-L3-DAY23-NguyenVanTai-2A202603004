@@ -1,0 +1,8 @@
+{"ts": 1791514315.5461478, "iso": "2026-10-09T02:51:55", "event": "primary_up", "archive_mode": "on", "archive_timeout_s": 10}
+{"ts": 1791514317.1492674, "iso": "2026-10-09T02:51:57", "event": "base_backup_done", "docs_in_backup": 200, "took_s": 1.26}
+{"ts": 1791514327.418641, "iso": "2026-10-09T02:52:07", "event": "recovery_target", "t_target": "2026-10-09 02:52:07.24409+00", "docs_at_target": 215, "docs_after_base_backup": 15}
+{"ts": 1791514328.6269484, "iso": "2026-10-09T02:52:08", "event": "disaster", "what": "DROP TABLE doc_meta (loi van hanh)"}
+{"ts": 1791514329.129714, "iso": "2026-10-09T02:52:09", "event": "wal_archived", "last_segment": "000000010000000000000005", "archived_count": 6}
+{"ts": 1791514329.6172001, "iso": "2026-10-09T02:52:09", "event": "primary_stopped"}
+{"ts": 1791514329.6602473, "iso": "2026-10-09T02:52:09", "event": "restore_start"}
+{"ts": 1791514332.8946054, "iso": "2026-10-09T02:52:12", "event": "restore_ready", "copy_base_s": 1.03, "start_and_replay_s": 1.87, "rto_s": 2.9, "docs_restored": 215, "docs_at_target": 215, "docs_lost": 0, "last_doc_ingested_at": "2026-10-09 02:52:06.532205+00"}
